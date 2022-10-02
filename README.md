@@ -1,5 +1,5 @@
 # Simon-game
-
+## Create a valid pull request and get "hacktoberfest-accepted" tag
 ![Game image](https://github.com/anurrags/Simon-game/blob/main/game.png)
 
 ## Play the game here [Simon Game](https://anurrags.github.io/Simon-game/)
