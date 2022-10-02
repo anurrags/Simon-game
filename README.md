@@ -1,5 +1,7 @@
 # Simon-game
 
+![Game image](https://github.com/anurrags/Simon-game/blob/main/game.png)
+
 ## Play the game here [Simon Game](https://anurrags.github.io/Simon-game/)
 
 ### Rules of the game can be read by opeing the game webpage and going to the rules section.
