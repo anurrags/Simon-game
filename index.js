@@ -134,8 +134,8 @@ function btnClickedView(value) {
 }
 
 $(".btn-rules").on("click", function () {
-  $(".container-rules").toggleClass("box-show");
+  $(".container-rules-overlay").toggleClass("box-show");
 });
 $(".btn-close").on("click", function () {
-  $(".container-rules").toggleClass("box-show");
+  $(".container-rules-overlay").toggleClass("box-show");
 });
