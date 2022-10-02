@@ -135,7 +135,7 @@ function btnClickedView(value) {
 
 const openModalBtn = document.querySelector(".btn-rules");
 const closeModalBtn = document.querySelector(".btn-close");
-const modal = document.querySelector(".container-rules");
+const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 
 console.log(modal);
