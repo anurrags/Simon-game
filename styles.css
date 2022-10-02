@@ -29,9 +29,9 @@ h2,
   color: #edd87c;
 }
 .container {
-  display: block;
-  width: 50%;
-  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2,300px);
+  justify-content: center;
 }
 
 .btn {
@@ -105,4 +105,11 @@ h2,
 }
 .box-show {
   visibility: hidden;
+}
+
+@media screen and (max-width:1000px) {
+  #level-title{
+    margin-top: 15vh;
+    margin-bottom: 20vh;
+  }
 }
