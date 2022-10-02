@@ -68,16 +68,15 @@ h2,
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
-.container-rules {
-  position: absolute;
-  transform: translate(30%, -35%);
-  margin: 15% auto;
-  padding: 5%;
-  width: 50%;
-  background-color: #fef9a7;
-  border: 5px solid #8e3200;
-}
 
+.container-rules {
+  position: fixed;
+  transform: translate(-50%);
+  left: 50%;
+  padding: 5%;
+  background-color: rgb(254, 249, 167);
+  border: 5px solid rgb(142, 50, 0);
+}
 .rules-heading {
   font-family: "Press Start 2P", cursive;
   text-align: center;
