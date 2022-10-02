@@ -133,22 +133,6 @@ function btnClickedView(value) {
     }, 100);
 }
 
-// const html = document.getElementsByTagName("html")[0];
-// const ele = document.querySelector(".container-rules");
-// console.log(html);
-
-// $(".btn-rules").on("click", function () {
-//     $(".container-rules").toggleClass("box-show");
-//     console.log(ele.classList);
-//     html.addEventListener("click", function () {
-//         console.log("click");
-//         ele.classList.add("box-show");
-//     });
-// });
-// $(".btn-close").on("click", function () {
-//     $(".container-rules").toggleClass("box-show");
-// });
-
 const openModalBtn = document.querySelector(".btn-rules");
 const closeModalBtn = document.querySelector(".btn-close");
 const modal = document.querySelector(".container-rules");
