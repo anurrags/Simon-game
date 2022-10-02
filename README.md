@@ -4,4 +4,4 @@
 
 ### Rules of the game can be read by opeing the game webpage and going to the rules section.
 
-## To contribute read the [Contibuting.md](CONTRIBUTING.MD) file.
+## To contribute read the [Contributing.md](CONTRIBUTING.MD) file.
