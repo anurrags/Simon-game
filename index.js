@@ -12,7 +12,7 @@ if (!gameOn) {
 }
 
 window.onload = function highsc() {
-  console.log("heelo");
+  
   var scoreStr = localStorage.getItem(saveKeyScore);
   if(scoreStr == null) {
     highScore = 0;
