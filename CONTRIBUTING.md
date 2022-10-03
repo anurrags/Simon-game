@@ -28,7 +28,7 @@ cd Simon-game
 4. Now create a branch
 
 ```
-git checkout branch-name
+git checkout -b branch-name
 ```
 
 5. Add the changes you want
