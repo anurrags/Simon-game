@@ -139,3 +139,30 @@ $(".btn-rules").on("click", function () {
 $(".btn-close").on("click", function () {
   $(".container-rules-overlay").toggleClass("box-show");
 });
+
+/*Theme change*/
+
+const body = document.querySelector("body");
+const toggle = document.querySelector(".toggle");
+const h1 = document.querySelector("h1");
+const h2 = document.querySelector("h2");
+const level_title = document.querySelector("#level-title");
+
+toggle.addEventListener("click", () => {
+  body.classList.toggle("dark")
+    ? (toggle.firstElementChild.className = "far fa-moon")
+    : (toggle.firstElementChild.className = "far fa-sun");
+});
+
+toggle.addEventListener("click", () => {
+  level_title.classList.toggle("dark")
+    ? (toggle.firstElementChild.className = "far fa-moon")
+    : (toggle.firstElementChild.className = "far fa-sun");
+});
+
+
+toggle.addEventListener("click", () => {
+  h2.classList.toggle("dark")
+    ? (toggle.firstElementChild.className = "far fa-moon")
+    : (toggle.firstElementChild.className = "far fa-sun");
+});

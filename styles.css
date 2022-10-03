@@ -1,7 +1,6 @@
-html,
 body {
   text-align: center;
-  background-color: #011f3f;
+  background-color: #a170db;
   margin: 0;
   height: 100%;
 }
@@ -16,8 +15,9 @@ body {
   font-family: "Press Start 2P", cursive;
   font-size: 2.2em;
   padding: 24px;
-  color: #fef2bf;
+  color: #202124;
 }
+
 h2,
 .highScore {
   font-family: "Press Start 2P", cursive;
@@ -25,18 +25,22 @@ h2,
   padding: 0 8px;
   color: #fef2bf;
 }
+
+h2{
+  color: #202124;
+}
+
 @media (min-width: 650px) {
   #level-title {
     font-family: "Press Start 2P", cursive;
     font-size: 3em;
     margin: 5%;
-    color: #fef2bf;
+    
   }
   h2,
   .highScore {
     font-family: "Press Start 2P", cursive;
     font-size: 2rem;
-    color: #fef2bf;
   }
 }
 @media (max-width: 360px) {
@@ -44,7 +48,6 @@ h2,
   .highScore {
     font-family: "Press Start 2P", cursive;
     font-size: 1rem;
-    color: #fef2bf;
   }
 }
 
@@ -201,4 +204,59 @@ h2,
 }
 .box-show {
   visibility: hidden;
+}
+
+
+.toggle {
+  top: 18%;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #b9ec91;
+  position: absolute;
+  right: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: rgba(135, 240, 87, 0.89) 0px 25px 50px -12px;
+  cursor: pointer;
+}
+
+.toggle i {
+  font-size: 2rem;
+  /*color: #777;*/
+}
+.toggle i:hover {
+  font-size: 2.1rem;
+  color: rgb(41, 40, 40);
+}
+
+/* Dark mode styling*/
+body.dark {
+  background-color: #202124;
+}
+
+body.dark .toggle {
+  background-color: #323232;
+  box-shadow: rgba(33, 34, 33, 0.89) 0px 25px 50px -12px;
+}
+
+body.dark .toggle i {
+  color: #fef9a7;
+}
+
+body.dark.toggle i:hover {
+  font-size: 2.1rem;
+  color: rgb(41, 40, 40);
+}
+
+body.dark{
+  color: #a170db;
+}
+
+#level-title.dark{
+  color: #a170db;
+}
+
+h2.dark{
+  color: #a170db;
 }
