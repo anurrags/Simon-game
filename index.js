@@ -1,13 +1,26 @@
+const saveKeyScore = "highscore"; //save key for local storage of highscore
 var patternCreated = [];
 var patternClicked = [];
 var level = 1;
-var highScore = 0;
+var highScore;
 var gameOn = false;
 var correctTill = 0;
 var aise = 1;
 if (!gameOn) {
   gameOn = true;
   $(document).on("keypress", gameStarts);
+}
+
+window.onload = function highsc() {
+  
+  var scoreStr = localStorage.getItem(saveKeyScore);
+  if(scoreStr == null) {
+    highScore = 0;
+   }
+   else {
+    highScore = parseInt(scoreStr);
+   }
+   $(".highScore").text(highScore);
 }
 
 // When game starts
@@ -17,10 +30,20 @@ function gameStarts() {
   $("h1").text("Press any Key to Start");
   level = 1;
   gameOn = true;
+ //get the high score form  loacal storage
+ var scoreStr = localStorage.getItem(saveKeyScore);
+ if(scoreStr == null) {
+  highScore = 0;
+ }
+ else {
+  highScore = parseInt(scoreStr);
+ }
+ $(".highScore").text(highScore);
   correctTill = 0;
   levelUpdate(level);
   generatePattern();
 }
+
 //When Game Ends
 function gameEnds() {
   $("h1").text("Game Over, Press Any Key to Restart");
@@ -80,9 +103,12 @@ function checkPattern(value) {
       num = 4;
       break;
   }
+
+  //Highscore button code
   if (patternCreated[correctTill] != num) {
     if (level > highScore) {
       highScore = level - 1;
+      localStorage.setItem(saveKeyScore,highScore);
     }
 
     gameEnds();
