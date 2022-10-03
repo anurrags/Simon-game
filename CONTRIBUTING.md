@@ -53,3 +53,18 @@ git push origin -u branch-name
 
 9. Create a pull request
 
+## Add Upstream to forked repository, to keep it synced with main branch
+
+1. Add upstream to your forked repository
+```
+git remote add upstream https://github.com/anurrags/Simon-game.git
+```
+2. Sync the changes from upstream repository
+```
+git fetch upstream
+```
+
+3. Merge the changes from the upstream branch to the local branch
+```
+git merge upstream/main
+```
