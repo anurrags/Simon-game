@@ -152,6 +152,7 @@ h2,
     margin-top: 5%;
     background-color: rgb(254, 249, 167);
     border: 5px solid rgb(142, 50, 0);
+    z-index: 2;
 }
 /* 
 .container-rules {
