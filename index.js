@@ -6,13 +6,37 @@ var highScore;
 var gameOn = false;
 var correctTill = 0;
 var aise = 1;
+
+// selecting 4 buttons
+let greenBtn = document.getElementById("green");
+let redBtn = document.getElementById("red");
+let yellowBtn = document.getElementById("yellow");
+let blueBtn = document.getElementById("blue");
+
+// function to disable all color Btns
+const disableBtns = ()=>{
+    greenBtn.style.pointerEvents = "none";
+    redBtn.style.pointerEvents = "none";
+    yellowBtn.style.pointerEvents = "none";
+    blueBtn.style.pointerEvents = "none";
+}
+// function to enable all color Btns
+const enableBtns = () => {
+    greenBtn.style.pointerEvents = "all";
+    redBtn.style.pointerEvents = "all";
+    yellowBtn.style.pointerEvents = "all";
+    blueBtn.style.pointerEvents = "all";
+};
+
+
 if (!gameOn) {
+  enableBtns(); //enable buttons after keypress
   gameOn = true;
   $(document).on("keypress", gameStarts);
 }
 
 window.onload = function highsc() {
-  
+  disableBtns(); // disable buttons until keypress
   var scoreStr = localStorage.getItem(saveKeyScore);
   if(scoreStr == null) {
     highScore = 0;
@@ -23,8 +47,10 @@ window.onload = function highsc() {
    $(".highScore").text(highScore);
 }
 
+
 // When game starts
 function gameStarts() {
+  enableBtns(); // enable buttons after game starts
   patternCreated = [];
   patternClicked = [];
   $("h1").text("Press any Key to Start");
@@ -44,6 +70,7 @@ function gameStarts() {
   generatePattern();
 }
 
+
 //When Game Ends
 function gameEnds() {
   $("h1").text("Game Over, Press Any Key to Restart");
@@ -55,6 +82,7 @@ function gameEnds() {
     $("body").removeClass("game-over");
   }, 1000);
   gameOn = false;
+  disableBtns(); // disable buttons after game over
 }
 /*******EventListener to button**************/
 $(".btn").on("click", function () {
@@ -118,6 +146,7 @@ function checkPattern(value) {
     level++;
     setTimeout(function () {
       levelUpdate(level);
+      enableBtns();  //enable buttons after every level
       generatePattern();
     }, 500);
   }
