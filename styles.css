@@ -35,7 +35,7 @@ h2{
     font-family: "Press Start 2P", cursive;
     font-size: 3em;
     margin: 5%;
-    
+    margin: 0; #used to remove gap at the top of the screen, since there is a scroll bar otherwise
   }
   h2,
   .highScore {
